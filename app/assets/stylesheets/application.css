@@ -1,0 +1,7 @@
+/*
+ * Third parties styles
+ *= require bootstrap/dist/css/bootstrap
+ *
+ * Application styles
+ *= require base
+ */

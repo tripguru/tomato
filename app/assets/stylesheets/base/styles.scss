@@ -1,0 +1,9 @@
+a {
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  &:focus {
+    outline: none;
+  }
+}

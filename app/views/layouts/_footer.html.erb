@@ -1,0 +1,10 @@
+<footer>
+  <div class='actions text-center my-2'>
+    <%= simple_form_for Food.new do |f| %>
+      <label for='food_image'>
+        <i class="fas fa-2x fa-plus-circle"></i>
+      </label>
+      <%= f.file_field :image, direct_upload: true %>
+    <% end %>
+  </div>
+</footer>

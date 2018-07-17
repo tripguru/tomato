@@ -1,0 +1,10 @@
+/* GLOBAL STYLES
+ *= require ./layout
+ *= require ./styles
+ *
+ * COMPONENT SPECIFIC STYLES
+ *= require_directory ./components
+ *
+ * PAGE SPECIFIC STYLES
+ *= require_directory ./pages
+ */

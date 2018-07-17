@@ -1,0 +1,85 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'compass/css3/transition';
+@import 'compass/css3/transform';
+@import '../../variables';
+
+.off-canvas {
+  @include transition(left .3s ease-out);
+
+  height: 100%;
+  position: relative;
+  left: 0;
+
+  .off-canvas-shadow {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  &.move-right, &.move-left {
+    .off-canvas-shadow {
+      visibility: visible;
+    }
+  }
+
+  &.move-right {
+    left: $off-canvas-bar-width;
+  }
+
+  &.move-left {
+    left: -$off-canvas-bar-width;
+  }
+
+  .off-canvas-bar {
+    position: absolute;
+    width: $off-canvas-bar-width;
+    top: 0;
+    height: 100%;
+
+    &.off-canvas-bar-left {
+      left: -$off-canvas-bar-width;
+    }
+
+    &.off-canvas-bar-right {
+      right: -$off-canvas-bar-width;
+    }
+  }
+
+  .off-canvas-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+
+    .off-canvas-main-content {
+      position: relative;
+      min-height: 100%;
+      padding-bottom: $footer-height;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .off-canvas {
+    header {
+      position: fixed;
+      z-index: 2;
+      width: 100%;
+      top: 0;
+    }
+
+    .off-canvas-main-content {
+      padding-top: 66px;
+    }
+  }
+}

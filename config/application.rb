@@ -8,8 +8,7 @@ require_relative '../lib/rack/reject_trace'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-# TODO: Change module name to the actual project name
-module RailsNew
+module Tomato
   class Application < Rails::Application
     ENV_TRUTHY = %w[enabled true t 1].freeze
 

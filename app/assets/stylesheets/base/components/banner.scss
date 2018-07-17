@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#welcome-banner {
+  height: $welcome-banner-height
+}

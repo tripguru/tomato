@@ -1,0 +1,13 @@
+<div class='off-canvas'>
+  <div class='off-canvas-bar off-canvas-bar-left'>Bar Left</div>
+  <div class='off-canvas-main'>
+    <div class='off-canvas-main-content'>
+      <%= render partial: 'layouts/flash' %>
+      <%= render partial: 'layouts/header' %>
+      <%= yield %>
+      <%= render partial: 'layouts/footer' %>
+    </div>
+  </div>
+  <div class='off-canvas-shadow off-canvas-close'></div>
+  <div class='off-canvas-bar off-canvas-bar-right'>Bar Right</div>
+</div>

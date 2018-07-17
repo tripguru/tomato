@@ -1,0 +1,18 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+header {
+  nav.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  header {
+    .container {
+      max-width: inherit;
+    }
+  }
+}

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     redirect_back fallback_location: root_path, allow_other_host: false
   end
 
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   private
 

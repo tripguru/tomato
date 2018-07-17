@@ -25,6 +25,7 @@ gem 'puma', '~> 3.11'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.4'
+gem 'compass-rails', github: 'Compass/compass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -68,6 +69,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Storage
 # gem "aws-sdk-s3", require: false
+
+# Frontend
+gem 'slim-rails'
+gem 'coffee-rails'
+gem 'simple_form'
+gem 'aws-sdk-s3', require: false
+gem 'image_processing', '~> 1.2'
 
 group :production do
   # Remove this if the app is not hosted on Heroku
