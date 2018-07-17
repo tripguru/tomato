@@ -3,14 +3,14 @@ jobs:
   checkout-code:
     working_directory: ~/src
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.4.1-node-browsers
     steps:
       - checkout
 
   yarn-install:
     working_directory: ~/src
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.4.1-node-browsers
     steps:
       - checkout
 
@@ -29,7 +29,7 @@ jobs:
   bundle-install:
     working_directory: ~/src
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.4.1-node-browsers
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -57,7 +57,7 @@ jobs:
     parallelism: 3
     working_directory: ~/src
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.4.1-node-browsers
         environment:
           HOST: http://example.com
           PGHOST: 127.0.0.1
