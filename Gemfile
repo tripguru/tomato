@@ -76,6 +76,7 @@ gem 'coffee-rails'
 gem 'simple_form'
 gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
+gem 'rest-client'
 
 group :production do
   # Remove this if the app is not hosted on Heroku
