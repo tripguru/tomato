@@ -68,13 +68,12 @@ gem 'secure_headers', require: false
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Storage
-# gem "aws-sdk-s3", require: false
+gem "aws-sdk-s3", '1.16.1', require: false
 
 # Frontend
 gem 'slim-rails'
 gem 'coffee-rails'
 gem 'simple_form'
-gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
 gem 'rest-client'
 
