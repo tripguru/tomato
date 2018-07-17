@@ -68,7 +68,7 @@ gem 'secure_headers', require: false
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Storage
-gem "aws-sdk-s3", '1.16.1', require: false
+gem "aws-sdk-s3", require: false
 
 # Frontend
 gem 'slim-rails'
