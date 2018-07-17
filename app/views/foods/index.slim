@@ -2,7 +2,10 @@
   .food.my-3
     .content style="background-image: url(#{url_for(food.image.variant(combine_options: {auto_orient: true, gravity: 'center', resize: '450x450^', crop: '450x450+0+0'}))}"
     .meta
-      .category Category ....
-      .nutrition Nutrition
-      .calory Calory
-      = link_to 'Delete', food_path(food), method: :delete
+      .container
+        - nutritions = ["Calories 545 Fat 30g Carbs 100g Protien 50g", "Calories 110 Fat 9g Carbs 3g Protien 3g", "Calories 239 Fat 9.28g Carbs 37.63g Protien 2.24g"]
+        - food.meta.each_with_index do |(category, percentage), index|
+          .row.category.mb-3
+            .col-5 = link_to "#{category} #{(percentage * 100).round(2)}%", "https://www.wongnai.com/businesses?q=#{category}"
+            .col-7.nutrition = nutritions[index]
+      = link_to 'Delete', food_path(food), method: :delete, class: 'delete-link'

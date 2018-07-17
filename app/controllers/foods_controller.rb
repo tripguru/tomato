@@ -22,9 +22,22 @@ class FoodsController < ApplicationController
   # POST /foods
   def create
     @food = Food.new(food_params)
-
     if @food.save
       # redirect_to @food, notice: 'Food was successfully created.'
+      response = RestClient.post("https://owl4glwns4.execute-api.us-west-2.amazonaws.com/api/train", {
+        data: Base64.encode64(@food.image.download),
+        topk: 3
+      }.to_json, {
+        content_type: :json
+      })
+      @food.meta = {}
+      json_response = JSON.parse(response.body)
+      results = json_response['response'].gsub(/[\[\]\"\']/, '').scan(/\(.+?\)/)
+      results.each do |result|
+        category_pair = result.gsub(/[\(\)]/, '').split(',')
+        @food.meta[category_pair[0]] = category_pair[1].strip.to_f
+      end
+      @food.save
       redirect_to action: 'index'
     else
       render :new

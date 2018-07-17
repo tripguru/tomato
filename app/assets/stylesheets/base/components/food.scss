@@ -30,6 +30,30 @@
     padding: 10px;
   }
 
+  .category:first-child {
+    font-size: 2rem;
+
+    .nutrition {
+      margin-top: 10px;
+    }
+  }
+
+  .nutrition {
+    font-size: 1rem;
+  }
+
+  .delete-link {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #e6e6e6;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   &.active {
     .meta {
       right: 0;
